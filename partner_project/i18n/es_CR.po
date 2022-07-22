@@ -44,7 +44,7 @@ msgstr "Etiquetas del contacto"
 #. module: partner_project
 #: model_terms:ir.actions.act_window,help:partner_project.action_partner_project_list
 msgid "Create a project Tag"
-msgstr "Crear Etiqueta de Contacto"
+msgstr "Crea Etiquetas de Proyectos"
 
 #. module: partner_project
 #: model:ir.model.fields,field_description:partner_project.field_res_partner_project__create_uid
