@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_project_list" model="ir.ui.view">
+            <field name="name">project Tags</field>
+            <field name="model">res.partner.project</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Contact Tags">
+                    <field name="name"/>
+                    <field name="color" widget="color_picker"/>
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_partner_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//span[@class='o_form_label o_td_label']" position="before">
+                    <field name="commercial_name_id" attrs="{'invisible':[('is_company','=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="partner_project_id" widget="many2many_tags" options="{'color_field': 'color'}" />
+                </xpath>
+                <xpath expr="//field[@name='child_ids']//field[@name='company_id']" position="after">
+                    <field name="partner_project_id" widget="many2many_tags" options="{'color_field': 'color'}" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
