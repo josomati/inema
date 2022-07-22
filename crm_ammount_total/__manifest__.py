@@ -1,8 +1,8 @@
 {
-    'name' : 'Tir_crm_ammount_total',
+    'name' : 'crm_ammount_total',
     'version' : '15.0.1.0',
-    'summary': '',
-    'sequence': 1,
+    'summary': 'customization for inema',
+    'author': "TiRecursos S.A - Lcamacho@tirecursos.com",
     'description': """
 Add a field that allow you to manage dolars and colones at the same time into crm
     """,
@@ -11,5 +11,5 @@ Add a field that allow you to manage dolars and colones at the same time into cr
     'data': [
         'views/crm_leads.xml',
     ],
-    'application': True,
+    'application': False,
     'license': 'LGPL-3',}
